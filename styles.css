@@ -34,7 +34,6 @@ font-family: sans-serif;
 display: flex;
 justify-content: center;
 
-
 }
 
 .scarecrow{
@@ -43,11 +42,10 @@ width: 50%;
 }
 
 .copy{
-position: relative;
+
 width: 50%;
 }
 .header{
-  position: absolute;
   font-family: Space Mono;
   font-style: normal;
   font-weight: bold;
@@ -58,7 +56,6 @@ width: 50%;
   color: var(--grey-1);
 }
 .description{
-
   width: 381px;
   height: 108px;
   left: 736px;
