@@ -4,7 +4,7 @@
   box-sizing: border-box;
 --grey-1: 333333;
 --grey-2: 4F4F4F;
-font-family: sans-serif;
+font-family: Space Mono, sans-serif;
 }
 
 .panel{
@@ -13,6 +13,7 @@ font-family: sans-serif;
 }
 
 .header__text{
+
   position: absolute;
   width: 133px;
   height: 25px;
@@ -32,17 +33,33 @@ font-family: sans-serif;
 
 .content{
 display: flex;
+padding-top: 10%;
+padding-bottom: 10%;
 justify-content: center;
 
 }
 
 .scarecrow{
 display: flexbox;
+max-width: 100%;
+padding-left: 5%;
+padding-right: 5%;
 width: 50%;
+min-width: 50%;
+height: auto;
+min-width: 25%;
+max-height: 80%;
+
 }
 
-.copy{
+/* fix the warping issues when the screen is small */
+/* set a minimum size for the scarecrow when screen shrinks*/
 
+
+.copy{
+  padding-left: 5%;
+  padding-right: 5%;
+  
 width: 50%;
 }
 .header{
@@ -54,6 +71,9 @@ width: 50%;
   letter-spacing: -0.035em;
   
   color: var(--grey-1);
+
+  padding-right: 10%;
+
 }
 .description{
   width: 381px;
@@ -63,20 +83,37 @@ width: 50%;
   
   font-family: Space Mono;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 24px;
   line-height: 36px;
   letter-spacing: -0.035em;
 
   color: var(--grey-2);
 }
+.button {
+  background-color: #333333; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: -0.035em;
+text-transform: uppercase;
+letter-spacing: -0.035em;
+text-transform: uppercase;
+font-family: Space Mono;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 21px;
+
+}
 
 .footer{
-  position: absolute;
-  width: 287px;
-  height: 17px;
-  left: 577px;
-  top: 1039px;
+  display: flex;
+  justify-content: center;
   
   font-family: Montserrat;
   font-style: normal;
@@ -90,6 +127,37 @@ width: 50%;
   color: #BDBDBD;
 }
 
-button {
-  background-color: blueviolet;
+
+@media only screen and (max-width: 750px) {
+ 
+  .header__text{
+
+    position: absolute;
+    width: 133px;
+    height: 25px;
+    left: 24px;
+    top: 20px;
+}
+
+.content{
+  flex-direction: column;
+  width: 100%;
+  }
+
+  .copy{
+        
+  width: 100%;
+  }
+  
+  .header{ 
+    font-size: 48px;
+    line-height: 71px;
+    padding-right: 0%;
+  }
+
+  .description{
+    font-size: 18px;
+    line-height: 27px;
+    width: 100%;
+  }
 }
